@@ -1,19 +1,24 @@
 import { expect, test } from 'vitest'
 import { Appointment } from './appointment'
-
-export const exampleProps: Readonly<
-  ConstructorParameters<typeof Appointment>[0]
-> = {
-  customer: 'John Doe',
-  startsAt: new Date(),
-  endsAt: new Date(Date.now() + 1),
-}
+import { exampleProps } from './appointment.spec.util'
 
 test('create an appointment', () => {
   const appointment = new Appointment(exampleProps)
 
   expect(appointment).toBeInstanceOf(Appointment)
   expect(appointment.customer).toEqual('John Doe')
+})
+
+test('cannot create an appointment that starts before now', () => {
+  const startsAt = new Date(Date.now() - 1)
+
+  expect(
+    () =>
+      new Appointment({
+        ...exampleProps,
+        startsAt,
+      }),
+  ).toThrow()
 })
 
 test('cannot create an appointment that ends before it starts', () => {

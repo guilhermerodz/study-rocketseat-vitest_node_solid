@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { Appointment } from '../entities/appointment'
-import { exampleProps } from '../entities/appointment.spec'
+import { exampleProps } from '../entities/appointment.spec.util'
 import { CreateAppointment } from './create-appointment'
 
 describe('Create Appointment', () => {
