@@ -4,11 +4,13 @@ specifiers:
   typescript: ^4.6.4
   vite: ^3.1.4
   vitest: ^0.23.4
+  zod: ^3.19.1
 
 devDependencies:
   typescript: 4.8.4
   vite: 3.1.4
   vitest: 0.23.4
+  zod: 3.19.1
 
 packages:
 
@@ -495,4 +497,8 @@ packages:
       - stylus
       - supports-color
       - terser
+    dev: true
+
+  /zod/3.19.1:
+    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
     dev: true
