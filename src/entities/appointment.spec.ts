@@ -5,7 +5,7 @@ test('create an appointment', () => {
   const appointment = new Appointment({
     customer: 'John Doe',
     startsAt: new Date(),
-    endsAt: new Date(),
+    endsAt: new Date(Date.now() + 1),
   })
 
   expect(appointment).toBeInstanceOf(Appointment)
