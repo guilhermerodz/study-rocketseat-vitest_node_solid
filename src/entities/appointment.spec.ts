@@ -1,7 +1,9 @@
 import { expect, test } from 'vitest'
 import { Appointment } from './appointment'
 
-const exampleProps: Readonly<ConstructorParameters<typeof Appointment>[0]> = {
+export const exampleProps: Readonly<
+  ConstructorParameters<typeof Appointment>[0]
+> = {
   customer: 'John Doe',
   startsAt: new Date(),
   endsAt: new Date(Date.now() + 1),
