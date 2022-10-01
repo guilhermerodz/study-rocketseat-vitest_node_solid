@@ -8,9 +8,7 @@ export class Appointment {
   private props: AppointmentProps
 
   constructor(props: AppointmentProps) {
-    const { startsAt, endsAt } = props
-
-    if (startsAt >= endsAt) {
+    if (props.startsAt >= props.endsAt) {
       throw new Error('Invalid end date')
     }
 
