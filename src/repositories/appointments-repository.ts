@@ -1,6 +1,6 @@
 import { Appointment } from '../entities/appointment'
 
-export interface AppointmentRepository {
+export interface AppointmentsRepository {
   create(appointment: Appointment): Promise<void>
   save(appointment: Appointment): Promise<void>
 }
